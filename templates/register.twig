@@ -1,0 +1,40 @@
+{% extends 'app.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">Register your profile</div>
+                <div class="panel-body">
+                    <form method="post" name="userForm" id="userForm" action="">
+                        <div class="form-group">
+                            <label for="FirstName">First Name</label>
+                            <input type="text" class="form-control" id="txtFirstName" name="txtFirstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="LastName">Last Name</label>
+                            <input type="text" class="form-control" id="txtLastName" name="txtLastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="text" class="form-control" id="txtEmail" name="txtEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" class="form-control" id="txtPassword" name="txtPassword" required>
+                        </div>
+                        <span class={{ code }}>
+						{{ errors }}
+					</span><br>
+                        <div class="form-group">
+                            <button style="float: right" type="submitxtNamet" id="register" class="btn btn-default">Register!</button>
+                        </div>
+                        <div class="form-group">
+                            <button onclick="location.href = '/';" style="float: left"  id="cancel" class="btn btn-default">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
